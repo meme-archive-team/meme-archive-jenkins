@@ -24,8 +24,11 @@ metadata:
   labels:
     app: jenkins
 spec:
+  type: NodePort
   ports:
   - port: 8080
     targetPort: 8080
+    protocol: TCP
+    nodePort: 30036
   selector:
     app: jenkins
